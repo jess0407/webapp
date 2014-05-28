@@ -2,10 +2,9 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>webapp</title>
-        <meta name="description" content="">
+        <title>Picapp</title>
+        <meta name="description" content="a web app to search for flickr pics via tags">
         <meta name="viewport" content="width=device-width">
-        <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
@@ -29,50 +28,18 @@
         <div class="container">
             <nav class="navbar navbar-default navbar-static-top" role="navigation">
                 <div class="container">
+                    <button id="contacts" type="button" class="btn btn-info">Home</button>
                     <button id="fruit" type="button" class="btn btn-danger">Fruits</button>
-                    <button id="veg" type="button" class="btn btn-success">Vegetables</button>
-                    <button id="contacts" type="button" class="btn btn-info">Contacts</button>
+                    <button id="veg" type="button" class="btn btn-success">Vegs</button>                   
                 </div>
             </nav>
-           
-            <section class="fruit">
-                <h1>Fruits</h1>
-            
-                <div class="row">
-                    <div class="col-md-4"><img src="images/1.jpg" alt="banana" class="img-responsive"></div>
-                    <div class="col-md-4"><img src="images/2.jpg" alt="orange" class="img-responsive"></div>
-                    <div class="col-md-4"><img src="images/3.jpg" alt="mango" class="img-responsive"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4"><img src="images/4.jpg" alt="banana" class="img-responsive"></div>
-                    <div class="col-md-4"><img src="images/5.jpg" alt="orange" class="img-responsive"></div>
-                    <div class="col-md-4"><img src="images/6.jpg" alt="mango" class="img-responsive"></div>
-                </div>
-                 <div class="row">
-                    <div class="col-md-4"><img src="images/7.jpg" alt="banana" class="img-responsive"></div>
-                    <div class="col-md-4"><img src="images/8.jpg" alt="orange" class="img-responsive"></div>
-                    <div class="col-md-4"><img src="images/9.jpg" alt="mango" class="img-responsive"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4"><img src="images/10.jpg" alt="banana" class="img-responsive"></div>
-                    <div class="col-md-4"><img src="images/11.jpg" alt="orange" class="img-responsive"></div>
-                    <div class="col-md-4"><img src="images/12.jpg" alt="mango" class="img-responsive"></div>
-                </div>
-
-
-            </section>
-
-            <section class="vegetable hide">
-                <h1>Vegetables</h1>
-                
-            </section>
-
             <section class="contacts">
 
                 <div class="input-group">
-                  <input id='picTag' type="text" class='form-control' placeholder='tags for the photo'>
+                  <input id='picTag' type="text" class='form-control' placeholder='cute, cat, dog'
+                  data-toggle="tooltip" data-placement="top" title="just one tag or tags seperated by comma">
                   <span class="input-group-btn">
-                      <button class="btn btn-warning" id='show'>show photos</button>
+                      <button class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="click to search photos via tags" id='show'>show photos</button>
                   </span>
                 </div><!-- /input-group -->
                    
@@ -80,10 +47,40 @@
                      
                  </div>
                 
+            </section>          
+            <section class="fruit hide">
+                <h1>Fruits</h1>
+            
+           
+                    <div class="col-md-4 col-sm-6 col-lg-3"><img src="images/1.jpg" alt="banana" class="img-responsive"></div>
+                    <div class="col-md-4 col-sm-6 col-lg-3"><img src="images/2.jpg" alt="orange" class="img-responsive"></div>
+                    <div class="col-md-4 col-sm-6 col-lg-3"><img src="images/3.jpg" alt="mango" class="img-responsive"></div>
+               
+             
+                    <div class="col-md-4 col-sm-6 col-lg-3"><img src="images/4.jpg" alt="banana" class="img-responsive"></div>
+                    <div class="col-md-4 col-sm-6 col-lg-3"><img src="images/5.jpg" alt="orange" class="img-responsive"></div>
+                    <div class="col-md-4 col-sm-6 col-lg-3"><img src="images/6.jpg" alt="mango" class="img-responsive"></div>
+           
+                    <div class="col-md-4 col-sm-6 col-lg-3"><img src="images/7.jpg" alt="banana" class="img-responsive"></div>
+                    <div class="col-md-4 col-sm-6 col-lg-3"><img src="images/8.jpg" alt="orange" class="img-responsive"></div>
+                    <div class="col-md-4 col-sm-6 col-lg-3"><img src="images/9.jpg" alt="mango" class="img-responsive"></div>
+                
+                    <div class="col-md-4 col-sm-6 col-lg-3"><img src="images/10.jpg" alt="banana" class="img-responsive"></div>
+                    <div class="col-md-4 col-sm-6 col-lg-3"><img src="images/11.jpg" alt="orange" class="img-responsive"></div>
+                    <div class="col-md-4 col-sm-6 col-lg-3"><img src="images/12.jpg" alt="mango" class="img-responsive"></div>
+                
+
+            </section>
+
+            <section class="vegetable hide" id = 'vegetables'>
+                <h1>Vegetables</h1>
+                
             </section>
 
         </div>
-
+        <footer class="footer">
+          <p> ©2014 Jessie Shi, London</p>
+        </footer>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
